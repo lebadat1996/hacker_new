@@ -1,0 +1,9 @@
+<div>{{title}}</div>
+
+<div>
+  <label>Name</label>
+  <br>
+  <input type="text" [value]="student.firstName" (change)="onChangeFirstName($event.target.value)">
+  <br>
+  <h1>{{student.firstName}}</h1>
+</div>

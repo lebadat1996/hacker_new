@@ -1,0 +1,29 @@
+<div style="text-align: center">
+  <h1>welcome to {{title}}</h1>
+</div>
+<div>Months:
+  <select (change)="changeEvent($event)">
+    <option *ngFor="let i of month">
+      {{i}}
+    </option>
+  </select>
+</div>
+<div>
+    <span *ngIf="is_valiable; then condition1 else condition2">
+        Condition is valid.
+    </span>
+  <ng-template #condition1>Condition is valid</ng-template>
+  <ng-template #condition2>Condition is invalid</ng-template>
+</div>
+<button (click)="myClickFunction($event.target.value)">click</button>
+
+<div style="margin-left: 500px">
+  <input type="text"
+         [(ngModel)]="message">
+  <button (click)="updateMessage()">click</button>
+</div>
+<ul>
+  <li  *ngFor="let message of messages">
+    <h1>{{message}}</h1>
+  </li>
+</ul>
